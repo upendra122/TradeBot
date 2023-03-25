@@ -1,0 +1,73 @@
+get  http://192.168.0.106:5000/strategy_1
+
+###
+get  http://127.0.0.1:5000/strategy_1
+
+###
+post  http://192.168.0.105:5000/stop_watch
+Content-Type: application/json
+
+{
+    "token":"772"
+}
+
+###
+
+
+
+post  http://192.168.0.105:5000/stop_watch
+Content-Type: application/json
+
+{
+    "token":"526"
+}
+###
+
+
+post  http://127.0.0.11:5000/backtest_S1
+Content-Type: application/json
+
+{
+    "token":"20374",
+    "exchange":"NSE",
+    "days":1000
+}
+
+###
+
+get  http://192.168.0.105:5000/get_screened_list_S1
+
+###
+
+get  http://127.0.0.1:5000/get_trade_taken_upto_now
+
+
+###
+post http://192.168.0.106:5000/mannual_watch
+Content-Type: application/json
+
+{
+    "stock":"526",
+    "sym":"BPCL-EQ",
+    "per":1.75
+}
+
+###
+post http://192.168.0.106:5000/mannual_watch
+Content-Type: application/json
+
+{
+    "stock":"19943",
+    "sym":"DEEPAKNTR-EQ",
+    "per":1.9
+}
+###
+get http://192.168.0.108:5000/insert_trade
+
+###
+POST http://192.168.0.108:5000/get_all_trades
+Content-Type: application/json
+
+{
+    "span":"all"
+}
